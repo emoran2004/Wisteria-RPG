@@ -1,0 +1,12 @@
+
+# Godot 4 generated files
+.godot/
+
+# Temporary files
+*.tmp
+*.bak
+
+# Operating system files
+.DS_Store
+Thumbs.db
+

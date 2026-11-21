@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://yhjjrv6alaj8"]
+
+[ext_resource type="Script" uid="uid://ckwq3plf33d68" path="res://scripts/forest_art.gd" id="1_3jybo"]
+[ext_resource type="Texture2D" uid="uid://c54n01fylmpq2" path="res://assets/environment/fairy_forest_spritesheet.png" id="2_accbd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ikrt6"]
+atlas = ExtResource("2_accbd")
+region = Rect2(3.375, -16.875, 742.625, 463.7422)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_accbd"]
+atlas = ExtResource("2_accbd")
+region = Rect2(742.71826, 0, 527.7656, 407.43005)
+
+[node name="LilyPondBackground" type="Node2D" unique_id=948184780]
+
+[node name="DistantForest" type="Parallax2D" parent="." unique_id=587328307]
+z_index = -10
+scroll_scale = Vector2(0.35, 0.15)
+
+[node name="ForestArt" type="Node2D" parent="DistantForest" unique_id=2031703641]
+script = ExtResource("1_3jybo")
+
+[node name="MiddleForest" type="Parallax2D" parent="." unique_id=546058672]
+z_index = -10
+scroll_scale = Vector2(0.5, 0.5)
+
+[node name="AncientWisteriaTree" type="Sprite2D" parent="MiddleForest" unique_id=1065657308]
+texture_filter = 1
+position = Vector2(283, 303)
+scale = Vector2(0.7774273, 0.7774273)
+texture = SubResource("AtlasTexture_ikrt6")
+region_enabled = true
+region_rect = Rect2(-1.0942383, -27.582275, 732.7969, 515.3717)
+
+[node name="CherryBlossomTree" type="Sprite2D" parent="MiddleForest" unique_id=1423247965]
+texture_filter = 1
+position = Vector2(848, 260)
+texture = SubResource("AtlasTexture_accbd")
+
+[node name="FairyForestSpritesheet" type="Sprite2D" parent="MiddleForest" unique_id=1697527785]
+visible = false
+position = Vector2(-861, 138)
+scale = Vector2(0.90625, 0.90625)
+texture = ExtResource("2_accbd")
+region_rect = Rect2(3.6875, -10.875, 743.1875, 448.938)
+
+[node name="NearForest" type="Parallax2D" parent="." unique_id=486279426]
+z_index = -10
+scroll_scale = Vector2(0.8, 0.8)

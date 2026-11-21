@@ -1,0 +1,101 @@
+[gd_scene format=3 uid="uid://ckbepqb882xdw"]
+
+[ext_resource type="Texture2D" uid="uid://hs8yx0my3gye" path="res://assets/wisteria/fall/fall_00.png" id="1_12kxe"]
+[ext_resource type="Texture2D" uid="uid://dfgcd34fd4wi7" path="res://assets/wisteria/idle/idle_00.png" id="1_ryts8"]
+[ext_resource type="Texture2D" uid="uid://ex4e7bsjw62d" path="res://assets/wisteria/idle/idle_01.png" id="2_4gs1t"]
+[ext_resource type="Texture2D" uid="uid://cocqdf32hcisr" path="res://assets/wisteria/fall/fall_01.png" id="2_pi3s4"]
+[ext_resource type="Texture2D" uid="uid://g7hjm5kcf3ng" path="res://assets/wisteria/idle/idle_02.png" id="3_qh8b0"]
+[ext_resource type="Texture2D" uid="uid://bbr7eh03216kp" path="res://assets/wisteria/idle/idle_03.png" id="4_v61h2"]
+[ext_resource type="Texture2D" uid="uid://bnrsojspu0g20" path="res://assets/wisteria/jump/jump_00.png" id="7_44216"]
+[ext_resource type="Texture2D" uid="uid://o2udk560hugg" path="res://assets/wisteria/jump/jump_01.png" id="8_3wovc"]
+[ext_resource type="Texture2D" uid="uid://cbwsmw7btu67h" path="res://assets/wisteria/jump/jump_02.png" id="9_0rmp6"]
+[ext_resource type="Texture2D" uid="uid://cc25dtebbxjrt" path="res://assets/wisteria/jump/jump_03.png" id="10_58cq0"]
+[ext_resource type="Texture2D" uid="uid://ctqdesrdjnm7c" path="res://assets/wisteria/land/land_00.png" id="11_ow6mg"]
+[ext_resource type="Texture2D" uid="uid://h60t1f1245kq" path="res://assets/wisteria/land/land_01.png" id="12_dn26k"]
+[ext_resource type="Texture2D" uid="uid://bkag55ba1x525" path="res://assets/wisteria/walk/walk_00.png" id="13_fpb2h"]
+[ext_resource type="Texture2D" uid="uid://cxn7mcbd32n3k" path="res://assets/wisteria/walk/walk_01.png" id="14_kp7bg"]
+[ext_resource type="Texture2D" uid="uid://xiwxc0bjwtdi" path="res://assets/wisteria/walk/walk_02.png" id="15_sefri"]
+[ext_resource type="Texture2D" uid="uid://bi0w7ae8oaq0" path="res://assets/wisteria/walk/walk_03.png" id="16_hc5rh"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ikrt6"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_12kxe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_pi3s4")
+}],
+"loop": 1,
+"name": &"fall",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ryts8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4gs1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qh8b0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_v61h2")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 4.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_44216")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_3wovc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_0rmp6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_58cq0")
+}],
+"loop": 0,
+"name": &"jump",
+"speed": 6.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_ow6mg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_dn26k")
+}],
+"loop": 0,
+"name": &"land",
+"speed": 8.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("13_fpb2h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_kp7bg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_sefri")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_hc5rh")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 8.0
+}]
+
+[node name="WisteriaVisual" type="Node2D" unique_id=543995532]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=654490304]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_ikrt6")
+animation = &"jump"
